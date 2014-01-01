@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "stophungerws", "D:\zpj\Azure\stophunger\vs2012\stophungerws\", "{55DE586B-861C-4812-B2C0-D691BCE7B727}"
+	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv2.0"
+		Debug.AspNetCompiler.VirtualPath = "/stophungerws"
+		Debug.AspNetCompiler.PhysicalPath = "D:\zpj\Azure\stophunger\vs2012\stophungerws\"
+		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\stophungerws\"
+		Debug.AspNetCompiler.Updateable = "true"
+		Debug.AspNetCompiler.ForceOverwrite = "true"
+		Debug.AspNetCompiler.FixedNames = "false"
+		Debug.AspNetCompiler.Debug = "True"
+		Release.AspNetCompiler.VirtualPath = "/stophungerws"
+		Release.AspNetCompiler.PhysicalPath = "D:\zpj\Azure\stophunger\vs2012\stophungerws\"
+		Release.AspNetCompiler.TargetPath = "PrecompiledWeb\stophungerws\"
+		Release.AspNetCompiler.Updateable = "true"
+		Release.AspNetCompiler.ForceOverwrite = "true"
+		Release.AspNetCompiler.FixedNames = "false"
+		Release.AspNetCompiler.Debug = "False"
+		VWDPort = "51008"
+		DefaultWebSiteLanguage = "Visual C#"
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{55DE586B-861C-4812-B2C0-D691BCE7B727}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{55DE586B-861C-4812-B2C0-D691BCE7B727}.Debug|Any CPU.Build.0 = Debug|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

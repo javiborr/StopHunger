@@ -1,0 +1,88 @@
+﻿<!doctype html>
+<html>
+<head>
+    <title>Stop Hunger v0.1</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html5shiv/3.6.1/html5shiv.js"></script>
+    <script src='http://ajax.aspnetcdn.com/ajax/mobileservices/MobileServices.Web-1.1.0.min.js'></script>
+    <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+    <script src="script/DonateController.js"></script>
+    <script src="script/DonatePage.js"></script>
+    <script src="script/DonateView.js"></script>
+    <script src="script/DonationManager.js"></script>
+    <link href="resources/stophungerm.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div data-role="page" data-theme="c" id="loginPage">
+        <div data-role="header" id="loginHeader" data-nobackbtn="true">
+            <h2>Stop Hunger Login</h2>
+        </div>  
+        <div data-role="content" id="loginContent">
+            <p>Por favor usa tu cuenta en FaceBook para hacer login</p>
+            <fb:login-button show-faces="true" width="200" max-rows="1"></fb:login-button>
+        </div>
+    </div>
+
+    <div data-role="page" data-theme="c" id="mainPage">
+
+        <!-- ====== main content starts here ===== -->  
+        <div data-role="header" id="donationFormHeader" data-nobackbtn="true">
+            <h2>Comida para donar</h2>
+        </div>  
+        <div data-role="content" id="donationFormContent">
+            <form>
+                <div id="Div0" class="ui-field-contain">
+                    <label for="BreadSlider">Pan:</label>
+                    <input type="range" data-highlight="true" name="BreadSlider" id="BreadSlider" value="5" min="0" max="25" />
+                </div>
+                <div id="Div1" class="ui-field-contain">
+                    <label for="CakeSlider">Boller&iacute;a:</label>
+                    <input type="range" data-highlight="true" name="CakeSlider" id="CakeSlider" value="5" min="0" max="25" />
+                </div>
+                <div id="Div2" class="ui-field-contain">
+                    <label for="SandwichSlider">Bocadillos:</label>
+                    <input type="range" data-highlight="true" name="SandwichSlider" id="SandwichSlider" value="5" min="0" max="25" />
+                </div>
+                <div id="Div3" class="ui-field-contain">
+                    <label for="SaladSlider">Ensaladas:</label>
+                    <input type="range" data-highlight="true" name="SaladSlider" id="SaladSlider" value="5" min="0" max="25" />
+                </div>
+                <button id="addDonationButton">Donar</button>
+            </form>
+        </div>  
+        <div data-role="footer" id="donationFormFooter"></div>  
+        <!-- ====== main content ends here ===== -->
+
+        <!-- ====== transition content page starts here ===== -->  
+        <div data-role="content" id="donationFormTransition">  
+        </div>  
+        <!-- ====== transition content ends here ===== --> 
+
+        <!-- ====== confirmation content starts here ===== -->  
+        <div data-role="header"  id="donationFormConfirmationHeader">
+            <h2>Donaci&oacute;n Notificada</h2>
+        </div>  
+        <div data-role="content" id="donationFormConfirmationContent" >  
+            <p>Muchas gracias por notificar esta donaci&oacute;n de comida.</p>
+            <button id="volverButton">Hacer otra donaci&oacute;n</button>
+        </div>  
+        <div data-role="footer" id="donationFormConfirmationFooter"></div>  
+        <!-- ====== confirmation content ends here ===== -->
+
+    </div><!-- /page -->
+
+    <div data-role="page" id="dialogPage"  data-theme="c" >
+        <div data-role="header">
+            <h2>Error</h2>
+        </div>
+        <div role="main" class="ui-content">
+            <p>Hay un problema con esta donaci&oacute;n</p>
+            <ul id="errorlog"></ul>
+        </div>
+    </div>
+
+</body>
+</html>
