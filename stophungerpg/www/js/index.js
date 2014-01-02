@@ -17,6 +17,7 @@
  * under the License.
  */
 var app = {
+    deviceIsReady : false,
     // Application Constructor
     initialize: function() {
         this.bindEvents();
@@ -45,5 +46,6 @@ var app = {
         receivedElement.setAttribute('style', 'display:block;');
 
         console.log('Received Event: ' + id);
+        deviceIsReady = true;
     }
 };
