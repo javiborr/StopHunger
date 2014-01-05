@@ -11,8 +11,7 @@
         //    return;
         //}
         //app.appInitialized = true;
-        console.log('initAll started');
-        //alert('initAll started');
+        //alert('BEGIN init');
         var mDonateController = new DonateController();
         var mDonationManager = new DonationManager();
         var mDonateView = new DonateView();
@@ -48,34 +47,33 @@
                     // Whether or not they are logged into Facebook: 2 ways
                     //1 Set status: true when you initialize the SDK and subscribe to the auth.authResponseChange event (recommended)
                     //2 Specifically call the FB.getLoginStatus function
-                    //alert('FB.getLoginStatus init');
-                    //FB.getLoginStatus(function (presponse) {
-                    //    //alert('FB.getLoginStatus presponse.status[' + presponse.status + ']');
-                    //    if (presponse.status === 'connected') {
-                    //        //var uid = presponse.authResponse.userID;
-                    //        //var accessToken = presponse.authResponse.accessToken;
-                    //        mDonateView.IsLogged(true);
-                    //    } else if (presponse.status === 'not_authorized') {
-                    //        // the user is logged in to Facebook, 
-                    //        // but has not authenticated your app
-                    //    } else {
-                    //        // the user isn't logged in to Facebook.
-                    //        FB.login();
-                    //    }
-                    //});
-                    //alert('FB.Event.subscribe init');
+                    alert('FB.getLoginStatus init');
+                    FB.getLoginStatus(function (presponse) {
+                        alert('FB.getLoginStatus presponse.status[' + presponse.status + ']');
+                        if (presponse.status === 'connected') {
+                            //var uid = presponse.authResponse.userID;
+                            //var accessToken = presponse.authResponse.accessToken;
+                            mDonateView.IsLogged(true);
+                        } else if (presponse.status === 'not_authorized') {
+                            // the user is logged in to Facebook, 
+                            // but has not authenticated your app
+                        } else {
+                            // the user isn't logged in to Facebook.
+                        }
+                    });
+                    alert('FB.Event.subscribe init');
                     FB.Event.subscribe('auth.authResponseChange', function (presponse) {
-                        //alert('FB.Event.subscribe callback presponse.status[' + presponse.status + ']');
+                        alert('FB.Event.subscribe callback presponse.status[' + presponse.status + ']');
                         if (presponse.status === 'connected') {
                             // TODO can work
-                            //alert('FB 1 presponse.status[' + presponse.status + ']');
+                            alert('FB 1 presponse.status[' + presponse.status + ']');
                             mDonateView.IsLogged(true);
                             testAPI(presponse.authResponse.userID);
                         } else if (presponse.status === 'not_authorized') {
-                            //alert('FB 2 presponse.status[' + presponse.status + ']');
+                            alert('FB 2 presponse.status[' + presponse.status + ']');
                             FB.login();
                         } else {
-                            //alert('FB 3 presponse.status[' + presponse.status + ']');
+                            alert('FB 3 presponse.status[' + presponse.status + ']');
                             FB.login();
                         }
                     });

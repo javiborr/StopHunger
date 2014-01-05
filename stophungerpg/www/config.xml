@@ -1,5 +1,11 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="com.bt.stophunger" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
+<widget 
+        xmlns="http://www.w3.org/ns/widgets" 
+        xmlns:cdv="http://cordova.apache.org/ns/1.0"
+        id="com.bt.stophunger" 
+        version="0.0.1" 
+        versionCode="1"
+        >
     <name>StopHunger</name>
     <description>
         Esta app facilita donar comida en lugar de tirarla a la basura.
@@ -7,6 +13,8 @@
     <author email="javier.borrajo@bt.com" href="http://www.bt.es">
         Fundacion BT
     </author>
+
     <content src="index.html" />
     <access origin="*" />
+
 </widget>
